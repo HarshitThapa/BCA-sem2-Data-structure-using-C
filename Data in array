@@ -1,0 +1,48 @@
+#include <stdio.h>
+int main() {
+int arr[100],a,i,b,c,d,e=0,n=100;
+printf("Size Of Array: ");
+scanf("%d",&a);
+printf("Enter Elements: \n");
+for(i=0;i<a;i++){
+    scanf("%d",&arr[i]);
+    e++;
+}
+while(1){
+    printf("ENTER: 1 TO INSERT DATA, 2 FOR DELETION, 3 TO DISPLAY AND 4 TO EXIT\n");
+    scanf("%d",&b);
+    switch(b){
+        case 1:
+        printf("Enter value:\n");
+        scanf("%d",&d);
+        printf("Enter Position:\n");
+        scanf("%d",&c);
+        if (n<=e-1||c<=0){printf("invalid postion:\n");
+    }else{
+        for(i=a;i>c-1;i--){
+            arr[i]=arr[i-1];
+            } arr[c-1]=d;
+            a++;
+            printf("Data inserted successfully\n");
+        } break;
+         case 2:
+        printf("Enter Position:\n");
+        scanf("%d",&c);
+        if (c<1||c>=n){printf("invalid postion:\n");
+    }else{
+        for(i=c-1;i<a-1;i++){
+            arr[i]=arr[i+1];
+            }a--;
+            printf("Data deleted successfully\n");
+        } break;
+         case 3:
+         printf("Data:\n");
+        for(i=0;i<a;i++){
+            printf("%d\n",arr[i]);
+        }break;
+         case 4:
+        printf("Invalid Choice\n");
+        }
+    }
+    return 0;
+}
